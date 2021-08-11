@@ -1,0 +1,68 @@
+<%- layout("layouts/boilerplate.ejs") %>
+
+<div class="row">
+  <h1 class="text-center">Edit Question</h1>
+   <div class="col-md-6 offset-md-3">
+    
+      <div class="card shadow mb-5">
+         <img
+        src="https://res.cloudinary.com/div355m8n/image/upload/v1628642359/QA_in_IT/mari-lezhava-q65bNe9fW-w-unsplash_u7xa9u.jpg"
+        alt="" 
+      />
+        <div class="card-body">
+
+<form action="/questions/<%= question._id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data" >
+  <div class="mb-3">
+    <label for="title" class="form-label">Title of the question</label>
+    <input type="text" class="form-control" id="title" name="question[title]" value="<%= question.title %>" required />
+      <div class="valid-feedback">
+          Looks good
+        </div>
+  </div>
+  <div class="mb-3">
+    <label for="category" class="form-label">Category</label>
+    <input type="text"  class="form-control"name="question[category]" id="category" value="<%= question.category %> " required/>
+     <div class="valid-feedback">
+          Looks good
+        </div>
+  </div>
+   <div class="mb-3">
+  <label for="image" class="form-label">Edit visual representation: </label>
+  <input class="form-control" name="image"  type="file" id="image" multiple >
+      <div class="valid-feedback">
+              try too find visual representation, it helps
+        </div>
+  </div>
+  <div class="mb-3">
+    <label for="answer" class="form-label">Answer</label>
+    <textarea
+      name="question[answer]"
+      id="answer"
+      cols="30"
+      rows="20" class="form-control" required maxlength="1460"
+    ><%= question.answer %></textarea>
+      <div class="valid-feedback">
+          Looks good
+        </div>
+  </div>
+  <div class="mb-3">
+    <% question.images.forEach((img, i)=>{ %>
+   <img src="<%=img.thumbnail%>" alt="" class="img-thumbnail">
+   <div class="form-check-inline">
+     <input type="checkbox" name="deleteImages[]" value="<%=img.filename%>" id="image-<%=i%>">
+     <label for="image-<%=i%>">Delete?</label>
+   </div>
+   <%  }) %> 
+  </div>
+  <div class="mb-3">
+   <div class="d-grid gap-2">
+            <button class="btn btn-lg btn-dark">Edit Question</button>
+            </div>
+  </div>
+</form>
+<a href="/questions"> back to all </a>
+
+  </div>
+</div>
+</div>
+</div>

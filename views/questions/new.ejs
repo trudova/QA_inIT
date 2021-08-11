@@ -1,0 +1,85 @@
+<%- layout("layouts/boilerplate.ejs") %>
+<div class="row">
+  <!-- <h1 class="text-center">New Question</h1> -->
+  <div class="col-md-6 offset-md-3 new-qa">
+    
+      <div class="card shadow mb-5">
+        <img
+        src="https://res.cloudinary.com/div355m8n/image/upload/v1628652450/QA_in_IT/artem-maltsev-0CvHQ62gwY8-unsplash_mr98vq.jpg"
+        alt="" 
+      />
+        <div class="card-body">
+        <form
+          action="/questions"
+          method="POST"
+          novalidate
+          class="validated-form"
+          enctype="multipart/form-data"
+        >
+          <div class="mb-3">
+            <label for="title" class="form-label">Title of the question</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              name="question[title]"
+              required
+            />
+            <div class="valid-feedback">good question</div>
+          </div>
+          <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <input
+              type="text"
+              class="form-control"
+              name="question[category]"
+              id="category"
+              required
+            />
+            <div class="valid-feedback">thanks for been specific</div>
+          </div>
+     
+
+          <div class="mb-3">
+            <label for="image" class="form-label"
+              >Add visual representation</label
+            >
+            <input
+              class="form-control"
+              name="image"
+              type="file"
+              id="image"
+              multiple
+              required
+            />
+            <div class="valid-feedback">
+          necessarily for visualising topic
+        </div>
+          </div>
+
+          <!-- <input type="file" name="image" id="" multiple> -->
+
+          <div class="mb-3">
+            <label for="answer" class="form-label">Answer</label>
+            <textarea
+              name="question[answer]"
+              id="answer"
+              cols="30"
+              rows="20"
+              class="form-control"
+              maxlength="1460"
+              required
+            ></textarea>
+            <div class="valid-feedback">we will work on it</div>
+          </div>
+          <div class="mb-3">
+            <div class="d-grid gap-2">
+            <button class="btn btn-lg btn-dark">Add Question</button>
+            </div>
+          </div>
+        </form>
+        <a href="/questions" class="text-muted"> back to all </a>
+      </div>
+    </div>
+  </div>
+</div>
