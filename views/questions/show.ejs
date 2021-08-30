@@ -33,7 +33,7 @@
         <h6 class="card-text text-muted">
           Submited by: <%= question.author.username %>
         </h6>
-        <p class="card-text lead">Disciplin: <%= question.category %></p>
+        <p class="card-text lead">Discipline: <%= question.category %></p>
         <p class="card-text fs-5"><%= question.answer %></p>
       </div>
 <% if(currentUser && question.author.equals(currentUser._id)){ %> 

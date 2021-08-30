@@ -1,0 +1,76 @@
+
+<%- layout("layouts/boilerplate.ejs") %>
+
+        
+<div class="row">
+  <div class="col-lg-6">
+         <div class="card shadow">
+      <div class="card-body">
+ <h5 class="lead text-secondary"> How to use</h5>
+ <p class="text-dark">In the questions session you can find all the questions people got at their interview. They ma had an answer or not. If not, you can offer your answer to that question. And post it  in the comments.</p>
+ <p class="text-dark">In the new question section, you can submit your question. If during the interview you didn’t come up with any answer, simply put NEED HELP in the answer input, and others will help you.
+All people can see the questions, answers and comments, however, only those who registered can submit their own questions and comments, as well as delete and update them.
+</p>
+<p>To contact developer for any reason <strong>liubovtrudovaapplying@gmail.com </strong> or use the form-></p>
+ </div>
+ </div>
+  </div>
+  <div class="col-lg-6">
+ 
+           <div class="card shadow">
+       <%- include("./layouts/partials/flash.ejs") %>
+      <div class="card-body">
+       
+        <h5 class="lead text-dark">leave your contacts below, and I'll get back to you as soon as posible</h5>
+        <form
+          action="/about"
+          method="post"
+          class="validated-form"
+          novalidate
+        >
+          <div class="mb-3">
+            <label for="fullname" class="form-label text-dark">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="fullname"
+              id="fullname"
+              placeholder="Full Name"
+              required
+            />
+            <div class="valid-feedback">Looks good</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label text-dark">Email</label>
+            <input
+              type="email"
+              class="form-control "
+              name="email"
+              id="email"
+              placeholder="email"
+              required
+            />
+            <div class="valid-feedback">Looks good</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label text-dark">Phone number</label>
+            <input
+              type="text"
+              class="form-control"
+              name="phone"
+              id="phone"
+              placeholder="Phone number"
+
+            />
+            <div class="valid-feedback">Looks good</div>
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-dark">Get in touch</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

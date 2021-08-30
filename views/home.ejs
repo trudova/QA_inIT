@@ -21,6 +21,7 @@
           <h3 class="float-md-left mb-0">QA_inIT</h3>
           <nav class="nav nav-masthead justify-content-center float-md-right">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link" href="/about">About</a>
              <a class="nav-link" href="/questions">Questions</a>
             <% if(!currentUser) { %>
             <a class="nav-link" href="/login">Login</a>
@@ -43,11 +44,12 @@
         <div class="row mt-3 mb-5">
           <div class="col-md-10 offset-1 mb-5">
              <h1>QA_inIT</h1>
-            <p class="lead fs-5">
-             Deare Friends. This Web App was developed specially for AQ automation. I believe our community will be stronger ,If we will be treating each other with support and kindness.
-So let’s start from support and knowledge sharing!<br>
- <br> And remember educating others it means create I peaceful work environment for yourself. 
-            </p>
+            <h4 class="lead fs-5">
+             Dear Friends. This Web App was developed specially for AQ automation. I believe our community will be stronger, if we will be helping each other to grow.
+Let’s start from support and knowledge sharing! 
+<br>
+ <br> And remember educating others it means create I peaceful work environment for yourself. <br> <br><br><br><br> <br><br><br>
+            </h4>
               <button class="switch-btn">
         <span>play</span>
         <span>pause</span>
@@ -57,78 +59,8 @@ So let’s start from support and knowledge sharing!<br>
           </div>
 
         </div>
-<div class="row">
-  <div class="col-lg-6">
-         <div class="card shadow">
-      <div class="card-body">
- <h5 class="lead text-secondary"> any offers</h5>, 
- <p class="text-dark">You can contact me at any time through the contact form or by email: <strong>liubovtrudovaapplying@gmail.com </strong></p>
- <p class="text-dark">Also, this application clearly has some problems. there is some I know about, and some I have no idea of their existence, feel free to point it out, and i'll be fixing them on the flight!</p>
- </div>
- </div>
-  </div>
-  <div class="col-lg-6">
- 
-           <div class="card shadow">
-       <%- include("./layouts/partials/flash.ejs") %>
-      <div class="card-body">
-       
-        <h5 class="lead text-dark">leave your contacts below, and I'll get back to you as soon as posible</h5>
-        <form
-          action="/"
-          method="post"
-          class="validated-form"
-          novalidate
-        >
-          <div class="mb-3">
-            <label for="fullname" class="form-label text-dark">Full Name</label>
-            <input
-              type="text"
-              class="form-control"
-              name="fullname"
-              id="fullname"
-              placeholder="Full Name"
-              required
-            />
-            <div class="valid-feedback">Looks good</div>
-          </div>
-
-          <div class="mb-3">
-            <label for="email" class="form-label text-dark">Email</label>
-            <input
-              type="email"
-              class="form-control "
-              name="email"
-              id="email"
-              placeholder="email"
-              required
-            />
-            <div class="valid-feedback">Looks good</div>
-          </div>
-
-          <div class="mb-3">
-            <label for="phone" class="form-label text-dark">Phone number</label>
-            <input
-              type="text"
-              class="form-control"
-              name="phone"
-              id="phone"
-              placeholder="Phone number"
-
-            />
-            <div class="valid-feedback">Looks good</div>
-          </div>
-          <div class="d-grid gap-2">
-            <button class="btn btn-dark">Get in touch</button>
-          </div>
-        </form>
-      </div>
-    </div>
 
 
-
-  </div>
-</div>
         </div>
       <footer class="mt-autho py-3 footer text-white">
         <p>&copy; Liubov Trudova <%= new Date().getFullYear()%></p>

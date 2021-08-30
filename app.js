@@ -100,7 +100,10 @@ app.use((req, res, next) => {
 app.get("/", (req, res)=>{
   res.render("home");
 });
-app.post("/", catchAsync(async (req, res)=>{
+app.get("/about", (req, res)=>{
+    res.render("about");
+})
+app.post("/about", catchAsync(async (req, res)=>{
     const {fullname, email, phone} = req.body;
     const data ={
         members:[
@@ -124,7 +127,7 @@ app.post("/", catchAsync(async (req, res)=>{
     }
    const request= await https.request(url, options, (response)=>{
         response.on("data", (data)=>{
-            console.log(JSON.parse(data));
+           
         })
     });
     
